@@ -1,0 +1,134 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #000; /* Black background */
+    color: #FFD700; /* Yellow text */
+}
+
+/* Header */
+header {
+    padding: 20px;
+    text-align: center;
+    background-color: #111;
+    
+}
+/* Login nav in top left corner */
+.loginnav {
+    display: flex;
+    justify-content: flex-start;  
+    gap: 15px;                    
+    padding: 10px 20px;
+    background-color: #111;      
+    
+    position: absolute;            
+    top: 0;
+    left: 0;
+                     
+}
+
+.loginnav a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 1px;
+}
+
+.loginnav a:hover {
+    background-color: #FFD700;
+    color: #111;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    background-color: #000;
+}
+
+nav a {
+    text-decoration: none;
+    color: #FFD700;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+/* Hero Section */
+.text {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.text h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.text p {
+    margin-bottom: 20px;
+    font-weight: bold;
+    color:#FFD700
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #FFD700;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #fff;
+}
+
+/* Songs Section */
+.songs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    border: 1px solid #FFD700;
+}
+.card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.card:hover {
+    background-color: #222;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #111;
+    margin-top: 20px;
+    border-top: 0px solid #FFD700;
+}
