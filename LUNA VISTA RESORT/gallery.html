@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery | Luna Vista Resort</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.gallery-page{
+  padding:120px 40px 60px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.gallery-title{
+  text-align:center;
+  font-size:40px;
+  margin-bottom:40px;
+  color:#c8eaff;
+}
+
+.gallery-title::after{
+  content:"";
+  display:block;
+  width:100%;
+  height:3px;
+  background:#c8eaff;
+  margin:10px auto 0;
+  border-radius:5px;
+}
+.room-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(1000px,1fr));
+  gap:25px;
+}
+
+.room-card{
+  background:#76b3da;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 6px 18px rgba(168, 22, 22, 0.15);
+  transition:0.3s;
+}
+
+.room-card:hover{
+  transform:translateY(-6px);
+}
+
+.room-card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+.room-info{
+  padding:18px;
+}
+
+.room-info h3{
+  margin-bottom:8px;
+}
+
+.room-info p{
+  font-size:14px;
+  color:#444444;
+}
+
+</style>
+</head>
+
+<body class="gallery-body">
+
+<header class="topbar static-topbar">
+<a class="brand" href="index.html">Luna Vista Resort</a>
+
+<nav>
+<ul class="menu">
+<li><a href="index.html">Home</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="about.html">About Luna Vista</a></li>
+<li><a href="reservation.html">Reservation</a></li>
+</ul>
+</nav>
+
+</header>
+
+<main class="gallery-page">
+
+<h1 class="gallery-title">Gallery Rooms</h1>
+
+<div class="room-grid">
+
+<div class="room-card">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80">
+<div class="room-info">
+<h3>Standard Room</h3>
+<p>Comfortable room perfect for solo travelers and short stays.</p>
+</div>
+</div>
+
+<div class="room-card">
+<img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=800&q=80">
+<div class="room-info">
+<h3>Family Room</h3>
+<p>Spacious room designed for families and group vacations.</p>
+</div>
+</div>
+
+<div class="room-card">
+<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80">
+<div class="room-info">
+<h3>Ocean Villa</h3>
+<p>Private villa with a beautiful ocean view and balcony.</p>
+</div>
+</div>
+
+<div class="room-card">
+<img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80">
+<div class="room-info">
+<h3>Deluxe Suite</h3>
+<p>Luxury suite with premium amenities and breathtaking views.</p>
+</div>
+</div>
+
+</div>
+
+</main>
+
+<footer class="site-footer">
+<p>contacts:</p>
+    <p>09484495739</p>
+    <p>lunavistaresort@gmail.com</p>
+</footer>
+
+</body>
+</html>
