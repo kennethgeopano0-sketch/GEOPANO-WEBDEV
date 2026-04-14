@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Velvet Crust - Payment</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="nav">
+  <a href="index.html" class="logo">Velvet Crust</a>
+  <div>
+    <a href="cart.html"><button>Cart</button></a>
+    <a href="index.html"><button>Home</button></a>
+  </div>
+</div>
+
+<div class="container">
+  <h2>Payment Info</h2>
+  <div id="method-info"></div>
+  <h3>Total: ₱<span id="payment-total">0</span></h3><br>
+  <input type="text" placeholder="Card / Account Number" id="card"><br><br>
+  <input type="text" placeholder="FullName" id="card"><br><br>
+  <button onclick="completePayment()">Pay Now</button>
+</div>
+
+<script src="js.js"></script>
+</body>
+</html>

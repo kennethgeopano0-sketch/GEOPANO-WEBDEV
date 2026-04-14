@@ -1,0 +1,228 @@
+/* ===== GENERAL STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #e19a66, #d6b38c);
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* ===== NAVBAR ===== */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  margin: 10px 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav button, .nav a button {
+  margin-left: 10px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 20px;
+  background: #f3e5d8;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav button:hover, .nav a button:hover {
+  background: #ffe8c2;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  width: 85%;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+}
+
+/* ===== HERO IMAGE ===== */
+.hero {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.hero-text {
+  position: absolute;
+  top: 30%;
+  left: 40px;
+}
+
+.hero-text h2 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.hero-text p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.hero-text button {
+  margin-top: 15px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 20px;
+  background: #f3e5d8;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.hero-text button:hover {
+  background: #ffe8c2;
+}
+
+/* ===== CARDS / PRODUCTS ===== */
+.cards {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.card {
+  width: 250px;
+  padding: 15px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.card p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  background: #f3e5d8;
+  color: black;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  background: #ffe8c2;
+}
+
+/* ===== CART ITEMS ===== */
+.cart-item {
+  margin: 10px 0;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+.cart-item button {
+  margin: 5px 5px 0 0;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #f3e5d8;
+  color: black;
+  transition: 0.3s;
+}
+
+.cart-item button:hover {
+  background: #ffe8c2;
+}
+
+/* ===== INPUT FIELDS ===== */
+input {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+/* ===== BUTTONS ===== */
+button {
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+/* ===== HEADINGS ===== */
+h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+/* ===== RESPONSIVE ===== */
+ @media (max-width: 768px) {
+  .cards {
+    justify-content: center;
+  }
+
+  .hero-text {
+    top: 20%;
+    left: 20px;
+  }
+
+  .hero-text h2 {
+    font-size: 28px;
+  }
+  
+}
