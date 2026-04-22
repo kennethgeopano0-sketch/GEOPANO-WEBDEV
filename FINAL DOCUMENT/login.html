@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOXYARD Resto Bar - Login</title>
+    <meta name="description" content="Member login for BOXYARD Resto Bar.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <h2>🍸 BOXYARD Resto Bar</h2>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="login.html" class="login-link">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="login">
+        <div class="container">
+            <h2>Member Login</h2>
+            <form id="loginForm" class="auth-form">
+                <input type="email" placeholder="Email Address" required aria-label="Email">
+                <input type="password" placeholder="Password" required aria-label="Password">
+                <label>
+                    <input type="checkbox" id="remember"> Remember me
+                </label>
+                <button type="submit">Sign In</button>
+                <a href="#" class="forgot">Forgot Password?</a>
+            </form>
+            <p class="signup">No account? <a href="#">Sign up</a></p>
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
