@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LedgerFlow Invoices</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <ul class="nav-list">
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="invoice.html" class="active">Invoices</a></li>
+      <li><a href="clients.html">Clients</a></li>
+      <li><a href="pay.html">Pay</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <h1>Invoices</h1>
+    <table class="invoice-table">
+      <thead>
+        <tr>
+          <th>Invoice #</th>
+          <th>Client</th>
+          <th>Date</th>
+          <th>Amount</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>001</td>
+          <td>OLFU</td>
+          <td>2026-03-01</td>
+          <td>$500</td>
+          <td>Paid</td>
+        </tr>
+        <tr>
+          <td>002</td>
+          <td>OLLC</td>
+          <td>2026-03-05</td>
+          <td>$1,200</td>
+          <td>Pending</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <script src="js.js"></script>
+</body>
+</html>

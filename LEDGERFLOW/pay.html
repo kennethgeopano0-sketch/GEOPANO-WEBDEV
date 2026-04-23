@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LedgerFlow Pay</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <ul class="nav-list">
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="invoice.html">Invoices</a></li>
+      <li><a href="clients.html">Clients</a></li>
+      <li><a href="pay.html" class="active">Pay</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <h1>Pay</h1>
+    <form id="pay-form">
+      <label for="invoice">Invoice Number:</label>
+      <input type="text" id="invoice" name="invoice" required />
+
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" name="amount" required min="1" />
+
+      <button type="submit">Make Payment</button>
+    </form>
+    <div id="pay-message"></div>
+  </main>
+
+  <script src="js.js"></script>
+</body>
+</html>
