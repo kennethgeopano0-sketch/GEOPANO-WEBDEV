@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile</title>
+<meta name="description" content="BOXYARD Resto Bar — fine dining, craft cocktails, live music.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="container">
+    <h1>🍸 BOXYARD <span style="color:#b8b8b8;font-weight:400;font-size:.95rem">· Member</span></h1>
+    <ul>
+      <li><a href="user.html" class="">Dashboard</a></li><li><a href="user-reservation.html" class="">Reservation</a></li><li><a href="user-menu.html" class="">Menu</a></li><li><a href="user-payment.html" class="">Payment</a></li><li><a href="user-transaction.html" class="">Transaction</a></li><li><a href="user-profile.html" class="active">Profile</a></li>
+      <li><span class="user-chip" data-user-name>Guest</span></li>
+      <li><a href="#" class="logout-link" onclick="logout();return false;">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="dash"><div class="container">
+<div class="dash-header"><div><h1>Profile</h1><p>Update your personal details and preferences.</p></div></div><div class="panels" style="grid-template-columns:1fr 2fr">
+  <div class="panel"><h2>Avatar</h2><div class="photo-slot square">
+  <span class="icon">🖼️</span>
+  <span class="label">Profile photo</span>
+  <span>Upload to <code>user-avatar.jpg</code></span>
+</div></div>
+  <div class="panel"><h2>Account Details</h2>
+    <form class="form-card" onsubmit="event.preventDefault();toast('Profile updated');">
+      <input value="Alex Carter" placeholder="Full name">
+      <input type="email" value="alex@boxyard.test" placeholder="Email">
+      <input value="+1 555 0140" placeholder="Phone">
+      <button class="btn btn-gold" style="justify-self:start">Save Changes</button>
+    </form></div>
+</div>
+</div></main>
+<script src="script.js"></script>
+<script>requireRole('user');</script>
+</body></html>

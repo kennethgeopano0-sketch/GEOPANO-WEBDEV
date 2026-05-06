@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Dashboard</title>
+<meta name="description" content="BOXYARD Resto Bar — fine dining, craft cocktails, live music.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="container">
+    <h1>🍸 BOXYARD <span style="color:#b8b8b8;font-weight:400;font-size:.95rem">· Member</span></h1>
+    <ul>
+      <li><a href="user.html" class="active">Dashboard</a></li><li><a href="user-reservation.html" class="">Reservation</a></li><li><a href="user-menu.html" class="">Menu</a></li><li><a href="user-payment.html" class="">Payment</a></li><li><a href="user-transaction.html" class="">Transaction</a></li><li><a href="user-profile.html" class="">Profile</a></li>
+      <li><span class="user-chip" data-user-name>Guest</span></li>
+      <li><a href="#" class="logout-link" onclick="logout();return false;">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="dash"><div class="container">
+<div class="dash-header"><div><h1>Welcome, <span data-user-name>Guest</span></h1><p>Your BOXYARD overview at a glance.</p></div></div><div class="stats-row"><div class="stat-card"><div class="lbl">Upcoming Reservations</div><div class="val">2</div><div class="hint">Next: Fri 8:00 PM</div></div><div class="stat-card"><div class="lbl">Loyalty Points</div><div class="val">1,240</div><div class="hint">Gold tier</div></div><div class="stat-card"><div class="lbl">Total Visits</div><div class="val">18</div></div><div class="stat-card"><div class="lbl">Saved Cards</div><div class="val">2</div></div></div>
+<div class="panels">
+  <div class="panel"><h2>Recent Activity</h2><ul>
+    <li><span>Reservation · Booth ×4</span><span class="muted">Apr 28</span></li>
+    <li><span>Payment · $128.40</span><span class="muted">Apr 28</span></li>
+    <li><span>Earned 240 pts</span><span class="muted">Apr 28</span></li></ul></div>
+  <div class="panel"><h2>Quick Actions</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:.6rem">
+      <a href="user-reservation.html" class="btn btn-gold btn-sm">New Reservation</a>
+      <a href="user-menu.html" class="btn btn-outline btn-sm">Browse Menu</a>
+      <a href="user-payment.html" class="btn btn-outline btn-sm">Payment Methods</a>
+      <a href="user-profile.html" class="btn btn-outline btn-sm">Edit Profile</a>
+    </div></div>
+</div>
+</div></main>
+<script src="script.js"></script>
+<script>requireRole('user');</script>
+</body></html>

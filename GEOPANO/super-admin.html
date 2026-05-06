@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Super Admin Dashboard</title>
+<meta name="description" content="BOXYARD Resto Bar — fine dining, craft cocktails, live music.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="container">
+    <h1>🍸 BOXYARD <span style="color:#b8b8b8;font-weight:400;font-size:.95rem">· Super Admin</span></h1>
+    <ul>
+      <li><a href="super-admin.html" class="active">Dashboard</a></li><li><a href="super-admin-reports.html" class="">Reports</a></li><li><a href="super-admin-sales.html" class="">Sales</a></li><li><a href="super-admin-users.html" class="">Users</a></li>
+      <li><span class="user-chip" data-user-name>Guest</span></li>
+      <li><a href="#" class="logout-link" onclick="logout();return false;">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="dash"><div class="container">
+<div class="dash-header"><div><h1>Super Admin Dashboard</h1><p>Global view across all venues and teams.</p></div></div><div class="stats-row"><div class="stat-card"><div class="lbl">Monthly Revenue</div><div class="val">$182,400</div><div class="hint">+12.4% MoM</div></div><div class="stat-card"><div class="lbl">Active Users</div><div class="val">2,841</div><div class="hint">+148 this week</div></div><div class="stat-card"><div class="lbl">Reservations / mo</div><div class="val">1,206</div></div><div class="stat-card"><div class="lbl">Avg Ticket</div><div class="val">$87.50</div></div></div>
+<div class="panels">
+  <div class="panel"><h2>Top Performers</h2><ul>
+    <li><span>Wagyu Ribeye</span><span style="color:#d4af37;font-weight:600">$18,420</span></li>
+    <li><span>Midnight Manhattan</span><span style="color:#d4af37;font-weight:600">$9,210</span></li>
+    <li><span>Lobster Risotto</span><span style="color:#d4af37;font-weight:600">$7,860</span></li>
+  </ul></div>
+  <div class="panel"><h2>System Health</h2><ul>
+    <li><span>Booking system</span><span class="tag">Operational</span></li>
+    <li><span>POS sync</span><span class="tag">Operational</span></li>
+    <li><span>Email delivery</span><span class="tag red">Degraded</span></li>
+  </ul></div>
+</div>
+</div></main>
+<script src="script.js"></script>
+<script>requireRole('superadmin');</script>
+</body></html>

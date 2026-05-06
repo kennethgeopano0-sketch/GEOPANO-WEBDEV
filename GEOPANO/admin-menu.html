@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu Management</title>
+<meta name="description" content="BOXYARD Resto Bar — fine dining, craft cocktails, live music.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="container">
+    <h1>🍸 BOXYARD <span style="color:#b8b8b8;font-weight:400;font-size:.95rem">· Admin</span></h1>
+    <ul>
+      <li><a href="admin.html" class="">Dashboard</a></li><li><a href="admin-reservation.html" class="">Reservations</a></li><li><a href="admin-menu.html" class="active">Menu</a></li><li><a href="admin-orders.html" class="">Orders</a></li><li><a href="admin-profile.html" class="">Profile</a></li>
+      <li><span class="user-chip" data-user-name>Guest</span></li>
+      <li><a href="#" class="logout-link" onclick="logout();return false;">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="dash"><div class="container">
+<div class="dash-header"><div><h1>Menu Management</h1><p>Add, edit, or toggle availability of menu items.</p></div></div><div class="panels" style="grid-template-columns:1fr 2fr">
+  <div class="panel"><h2>Add New Item</h2>
+    <form class="form-card" onsubmit="event.preventDefault();toast('Item added');this.reset();">
+      <input placeholder="Item name" required>
+      <select><option>Food</option><option>Cocktail</option><option>Wine</option></select>
+      <input type="number" placeholder="Price" required>
+      <input placeholder="Photo slot (e.g. food-new.jpg)">
+      <button class="btn btn-gold">Add Item</button>
+    </form></div>
+  <div class="panel"><h2>Current Menu</h2><ul style="gap:.6rem"><li><div style="width:64px;flex-shrink:0"><div class="photo-slot square">
+  <span class="icon">🖼️</span>
+  <span class="label">Wagyu Ribeye</span>
+  <span>Upload to <code>food-wagyu.jpg</code></span>
+</div></div><div style="flex:1;min-width:0"><div><b>Wagyu Ribeye</b> <span class="muted">· Food</span></div><div style="color:#d4af37;font-weight:600">$78</div></div><span class="tag">Available</span><button class="btn btn-outline btn-sm" onclick="toast('Removed')">Remove</button></li>
+<li><div style="width:64px;flex-shrink:0"><div class="photo-slot square">
+  <span class="icon">🖼️</span>
+  <span class="label">Lobster Risotto</span>
+  <span>Upload to <code>food-risotto.jpg</code></span>
+</div></div><div style="flex:1;min-width:0"><div><b>Lobster Risotto</b> <span class="muted">· Food</span></div><div style="color:#d4af37;font-weight:600">$44</div></div><span class="tag">Available</span><button class="btn btn-outline btn-sm" onclick="toast('Removed')">Remove</button></li>
+<li><div style="width:64px;flex-shrink:0"><div class="photo-slot square">
+  <span class="icon">🖼️</span>
+  <span class="label">Midnight Manhattan</span>
+  <span>Upload to <code>cocktail-manhattan.jpg</code></span>
+</div></div><div style="flex:1;min-width:0"><div><b>Midnight Manhattan</b> <span class="muted">· Cocktail</span></div><div style="color:#d4af37;font-weight:600">$18</div></div><span class="tag">Available</span><button class="btn btn-outline btn-sm" onclick="toast('Removed')">Remove</button></li>
+<li><div style="width:64px;flex-shrink:0"><div class="photo-slot square">
+  <span class="icon">🖼️</span>
+  <span class="label">Barolo Riserva</span>
+  <span>Upload to <code>wine-barolo.jpg</code></span>
+</div></div><div style="flex:1;min-width:0"><div><b>Barolo Riserva</b> <span class="muted">· Wine</span></div><div style="color:#d4af37;font-weight:600">$24</div></div><span class="tag muted">Hidden</span><button class="btn btn-outline btn-sm" onclick="toast('Removed')">Remove</button></li></ul></div>
+</div>
+</div></main>
+<script src="script.js"></script>
+<script>requireRole('admin');</script>
+</body></html>

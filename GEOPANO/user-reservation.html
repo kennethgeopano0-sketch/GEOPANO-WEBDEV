@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Reservations</title>
+<meta name="description" content="BOXYARD Resto Bar — fine dining, craft cocktails, live music.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="container">
+    <h1>🍸 BOXYARD <span style="color:#b8b8b8;font-weight:400;font-size:.95rem">· Member</span></h1>
+    <ul>
+      <li><a href="user.html" class="">Dashboard</a></li><li><a href="user-reservation.html" class="active">Reservation</a></li><li><a href="user-menu.html" class="">Menu</a></li><li><a href="user-payment.html" class="">Payment</a></li><li><a href="user-transaction.html" class="">Transaction</a></li><li><a href="user-profile.html" class="">Profile</a></li>
+      <li><span class="user-chip" data-user-name>Guest</span></li>
+      <li><a href="#" class="logout-link" onclick="logout();return false;">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="dash"><div class="container">
+<div class="dash-header"><div><h1>My Reservations</h1><p>Book a new table or manage existing bookings.</p></div></div><div class="panels">
+  <div class="panel"><h2>New Reservation</h2>
+    <form class="form-card" onsubmit="event.preventDefault();toast('Reservation requested!');this.reset();">
+      <input type="date" required><input type="time" required>
+      <input type="number" min="1" max="20" placeholder="Party size" required>
+      <select><option>Leather Booth</option><option>Bar Counter</option><option>Garden Patio</option><option>Private Lounge</option></select>
+      <button class="btn">Request Reservation</button>
+    </form></div>
+  <div class="panel"><h2>Upcoming &amp; Past</h2><ul>
+    <li><div><div>2026-05-08 · 20:00</div><div class="muted">Leather Booth · party of 4</div></div><span class="tag">Confirmed</span></li>
+    <li><div><div>2026-05-22 · 19:30</div><div class="muted">Bar Counter · party of 2</div></div><span class="tag red">Pending</span></li>
+    <li><div><div>2026-04-15 · 21:00</div><div class="muted">Patio · party of 3</div></div><span class="tag muted">Completed</span></li>
+  </ul></div>
+</div>
+</div></main>
+<script src="script.js"></script>
+<script>requireRole('user');</script>
+</body></html>
