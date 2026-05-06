@@ -24,30 +24,22 @@
   <div class="panel"><h2>Add New Item</h2>
     <form class="form-card" onsubmit="event.preventDefault();toast('Item added');this.reset();">
       <input placeholder="Item name" required>
-      <select><option>Food</option><option>Cocktail</option><option>Wine</option></select>
-      <input placeholder="Photo slot (e.g. food-new.jpg)">
+      <select><option>Foods</option><option>Drinks</option></select>
+      
       <button class="btn btn-gold">Add Item</button>
     </form></div>
   <div class="panel"><h2>Current Menu</h2><ul style="gap:.6rem"><li><div style="width:64px;flex-shrink:0"><div class="photo-slot square">
-  <span class="icon">IMG</span>
-  <span class="label">Wagyu Bistek Tagalog</span>
-  <span>Upload to <code>food-wagyu.jpg</code></span>
-</div></div><div style="flex:1;min-width:0"><div><b>Wagyu Bistek Tagalog</b> <span class="muted">- Food</span></div></div><span class="tag">Available</span><button class="btn btn-outline btn-sm" onclick="toast('Removed')">Remove</button></li>
+  <img src="sisig.jpg">
+</div></div><div style="flex:1;min-width:0"><div><b>Sisig</b> <span class="muted">- Food</span></div></div><span class="tag">Available</span><button class="btn btn-outline btn-sm" onclick="toast('Removed')">Remove</button></li>
 <li><div style="width:64px;flex-shrink:0"><div class="photo-slot square">
-  <span class="icon">IMG</span>
-  <span class="label">Lobster Arroz Caldo</span>
-  <span>Upload to <code>food-risotto.jpg</code></span>
-</div></div><div style="flex:1;min-width:0"><div><b>Lobster Arroz Caldo</b> <span class="muted">- Food</span></div></div><span class="tag">Available</span><button class="btn btn-outline btn-sm" onclick="toast('Removed')">Remove</button></li>
+  <img src="wings.jpg">
+</div></div><div style="flex:1;min-width:0"><div><b>Chicken Wings</b> <span class="muted">- Food</span></div></div><span class="tag">Available</span><button class="btn btn-outline btn-sm" onclick="toast('Removed')">Remove</button></li>
 <li><div style="width:64px;flex-shrink:0"><div class="photo-slot square">
-  <span class="icon">IMG</span>
-  <span class="label">Hatinggabi sa Maynila</span>
-  <span>Upload to <code>cocktail-manhattan.jpg</code></span>
-</div></div><div style="flex:1;min-width:0"><div><b>Hatinggabi sa Maynila</b> <span class="muted">- Cocktail</span></div></div><span class="tag">Available</span><button class="btn btn-outline btn-sm" onclick="toast('Removed')">Remove</button></li>
+  <img src="rh.jpg">
+</div></div><div style="flex:1;min-width:0"><div><b>Red Horse</b> <span class="muted">- Drinks</span></div></div><span class="tag">Available</span><button class="btn btn-outline btn-sm" onclick="toast('Removed')">Remove</button></li>
 <li><div style="width:64px;flex-shrink:0"><div class="photo-slot square">
-  <span class="icon">IMG</span>
-  <span class="label">Pulang Alak Reserve</span>
-  <span>Upload to <code>wine-barolo.jpg</code></span>
-</div></div><div style="flex:1;min-width:0"><div><b>Pulang Alak Reserve</b> <span class="muted">- Wine</span></div></div><span class="tag muted">Hidden</span><button class="btn btn-outline btn-sm" onclick="toast('Removed')">Remove</button></li></ul></div>
+  <img src="gin.jpg">
+</div></div><div style="flex:1;min-width:0"><div><b>Gin</b> <span class="muted">- Drinks</span></div></div><span class="tag muted">Hidden</span><button class="btn btn-outline btn-sm" onclick="toast('Removed')">Remove</button></li></ul></div>
 </div>
 </div></main>
 <script src="script.js"></script>

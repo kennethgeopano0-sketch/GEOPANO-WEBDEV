@@ -4,9 +4,9 @@
 
 // ---------- Demo accounts (frontend-only, no database) ----------
 const DEMO_ACCOUNTS = [
-  { username: 'user1',  password: 'user1pass',  role: 'user',       displayName: 'Alex Carter',  redirect: 'user.html' },
-  { username: 'admin1', password: 'admin1pass', role: 'admin',      displayName: 'Jordan Reyes', redirect: 'admin.html' },
-  { username: 'super1', password: 'super1pass', role: 'superadmin', displayName: 'Morgan Vale',  redirect: 'super-admin.html' },
+  { username: 'user1',  password: 'user1pass',  role: 'user',       displayName: 'Ken Geopano',  redirect: 'user.html' },
+  { username: 'admin1', password: 'admin1pass', role: 'admin',      displayName: 'Jose Anjelo', redirect: 'admin.html' },
+  { username: 'super1', password: 'super1pass', role: 'superadmin', displayName: 'Pia Caidic',  redirect: 'super-admin.html' },
 ];
 const ROLE_LABEL = { user: 'User', admin: 'Admin', superadmin: 'Super Admin' };
 const ROLE_HOME  = { user: 'user.html', admin: 'admin.html', superadmin: 'super-admin.html' };
@@ -55,7 +55,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 })();
 
-// ---------- Inject Login/Dashboard chip into public nav if logged in ----------
+// ---------- Inject Login/Dashboard chip into public nav if logged in 
 (function injectLoginChip(){
   const link = document.querySelector('.login-link');
   if (!link) return;
