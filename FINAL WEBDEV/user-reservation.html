@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Reservations</title>
+<meta name="description" content="BOXYARD Resto Bar - fine dining, craft cocktails, live music.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="container">
+    <h1>BOXYARD <span style="color:#b8b8b8;font-weight:400;font-size:.95rem">- Member</span></h1>
+    <ul>
+      <li><a href="user.html" class="">Dashboard</a></li><li><a href="user-reservation.html" class="active">Reservation</a></li><li><a href="user-menu.html" class="">Menu</a></li><li><a href="user-payment.html" class="">Payment</a></li><li><a href="user-transaction.html" class="">Transaction</a></li><li><a href="user-profile.html" class="">Profile</a></li>
+      <li><span class="user-chip" data-user-name>Guest</span></li>
+      <li><a href="#" class="logout-link" onclick="logout();return false;">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="dash"><div class="container">
+<div class="dash-header"><div><h1>My Reservations</h1><p>Book a new table or manage existing bookings.</p></div></div><div class="panels">
+  <div class="panel"><h2>New Reservation</h2>
+    <form class="form-card" onsubmit="event.preventDefault();toast('Reservation requested!');this.reset();">
+      <input type="date" required><input type="time" required>
+      <input type="number" min="1" max="20" placeholder="Party size" required>
+      <select><option>Leather Booth - &#8369;80</option><option>Private Lounge with Billiard Table - &#8369;50</option><option>Private Lounge with Karaoke - &#8369;65</option><option>Private Lounge - &#8369;150</option></select>
+      <button class="btn">Request Reservation</button>
+    </form></div>
+  <div class="panel"><h2>Upcoming &amp; Past</h2><ul class="reservation-list">
+    <li class="reservation-card"><div class="photo-slot reservation-shot">
+  <span class="icon">IMG</span>
+  <span class="label">Leather Booth</span>
+  <span>Using <code>leather.jpeg</code></span>
+  <img src="leather.jpeg" alt="Leather Booth" onerror="this.onerror=null;this.src='table-booth.jpg'">
+</div><div class="reservation-copy"><div>2026-05-08 - 20:00</div><div class="muted">Leather Booth - party of 4</div><div class="reservation-price">&#8369;80</div></div><span class="tag">Confirmed</span></li>
+    <li class="reservation-card"><div class="photo-slot reservation-shot">
+  <span class="icon">IMG</span>
+  <span class="label">Private Lounge with Billiard Table</span>
+  <span>Upload to <code>table-bar.jpg</code></span>
+  <img src="table-bar.jpg" alt="Private Lounge with Billiard Table" onerror="this.style.display='none'">
+</div><div class="reservation-copy"><div>2026-05-22 - 19:30</div><div class="muted">Private Lounge with Billiard Table - party of 2</div><div class="reservation-price">&#8369;50</div></div><span class="tag red">Pending</span></li>
+    <li class="reservation-card"><div class="photo-slot reservation-shot">
+  <span class="icon">IMG</span>
+  <span class="label">Private Lounge with Karaoke</span>
+  <span>Upload to <code>table-patio.jpg</code></span>
+  <img src="table-patio.jpg" alt="Private Lounge with Karaoke" onerror="this.style.display='none'">
+</div><div class="reservation-copy"><div>2026-04-15 - 21:00</div><div class="muted">Private Lounge with Karaoke - party of 3</div><div class="reservation-price">&#8369;65</div></div><span class="tag muted">Completed</span></li>
+  </ul></div>
+</div>
+</div></main>
+<script src="script.js"></script>
+<script>requireRole('user');</script>
+</body></html>

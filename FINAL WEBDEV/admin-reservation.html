@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reservation Management</title>
+<meta name="description" content="BOXYARD Resto Bar - fine dining, craft cocktails, live music.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="container">
+    <h1>BOXYARD <span style="color:#b8b8b8;font-weight:400;font-size:.95rem">- Admin</span></h1>
+    <ul>
+      <li><a href="admin.html" class="">Dashboard</a></li><li><a href="admin-reservation.html" class="active">Reservations</a></li><li><a href="admin-menu.html" class="">Menu</a></li><li><a href="admin-orders.html" class="">Orders</a></li><li><a href="admin-profile.html" class="">Profile</a></li>
+      <li><span class="user-chip" data-user-name>Guest</span></li>
+      <li><a href="#" class="logout-link" onclick="logout();return false;">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="dash"><div class="container">
+<div class="dash-header"><div><h1>Reservation Management</h1><p>Approve, reschedule, or cancel guest bookings.</p></div></div><div class="panel"><h2>All Reservations</h2><div class="table-wrap"><table><thead><tr><th>Guest</th><th>Date</th><th>Time</th><th>Party</th><th>Table</th><th>Price</th><th>Status</th><th>Actions</th></tr></thead><tbody><tr><td><b>Alex Carter</b></td><td>2026-05-08</td><td>20:00</td><td>4</td><td>Leather Booth</td><td>&#8369;80</td><td><span class="tag">Confirmed</span></td><td class="actions"><button onclick="toast('Confirmed')">Confirm</button><button class="danger" onclick="toast('Cancelled')">Cancel</button></td></tr>
+<tr><td><b>Jamie Liu</b></td><td>2026-05-08</td><td>20:30</td><td>2</td><td>Private Lounge with Karaoke</td><td>&#8369;65</td><td><span class="tag red">Pending</span></td><td class="actions"><button onclick="toast('Confirmed')">Confirm</button><button class="danger" onclick="toast('Cancelled')">Cancel</button></td></tr>
+<tr><td><b>Sam Patel</b></td><td>2026-05-09</td><td>19:00</td><td>6</td><td>Private Lounge</td><td>&#8369;150</td><td><span class="tag red">Pending</span></td><td class="actions"><button onclick="toast('Confirmed')">Confirm</button><button class="danger" onclick="toast('Cancelled')">Cancel</button></td></tr></tbody></table></div></div>
+</div></main>
+<script src="script.js"></script>
+<script>requireRole('admin');</script>
+</body></html>

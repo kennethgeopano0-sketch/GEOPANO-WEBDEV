@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BOXYARD Resto Bar - Reservations</title>
+<meta name="description" content="BOXYARD Resto Bar - fine dining, craft cocktails, live music.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="container">
+    <h1>BOXYARD Resto Bar</h1>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="reservations.html">Reservations</a></li>
+      <li><a href="login.html" class="login-link">Login</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+<section class="reservations">
+  <div class="container">
+    <h2 class="section-title" style="color:#fff">Book Your Table</h2>
+    <p class="section-sub" style="color:rgba(255,255,255,.85)">Choose a private room or lounge space that fits your celebration.</p>
+    <div class="tables-grid"><button type="button" class="table-card active" data-value="booth"><div class="photo-slot">
+  <span class="icon">IMG</span>
+  <span class="label">Leather Booth</span>
+  <span>Using <code>leather.jpeg</code></span>
+  <img src="leather.jpg">
+</div><div class="table-card-body"><h4>Leather Booth</h4><div class="price">&#8369;800</div><p>Cozy booth for 4 with a premium lounge feel.</p></div></button>
+<button type="button" class="table-card" data-value="bar"><div class="photo-slot">
+  <span class="icon">IMG</span>
+  <span class="label">Private Lounge with Billiard Table</span>
+  <span>Upload to <code>table-bar.jpg</code></span>
+  <img src="bilyar.jpg">
+</div><div class="table-card-body"><h4>Private Lounge with Billiard Table</h4><div class="price">&#8369;1200</div><p>Private space with a billiard table for a relaxed group hangout.</p></div></button>
+<button type="button" class="table-card" data-value="patio"><div class="photo-slot">
+  <span class="icon">IMG</span>
+  <span class="label">Private Lounge with Karaoke</span>
+  <span>Upload to <code>table-patio.jpg</code></span>
+  <img src="karaoke.jpg">
+</div><div class="table-card-body"><h4>Private Lounge with Karaoke</h4><div class="price">&#8369;1000</div><p>Private singing room for fun celebrations and late-night sessions.</p></div></button>
+<button type="button" class="table-card" data-value="private"><div class="photo-slot">
+  <span class="icon">IMG</span>
+  <span class="label">Private Lounge</span>
+  <span>Upload to <code>table-private.jpg</code></span>
+  <img src="vip.jpg">
+</div><div class="table-card-body"><h4>Private Lounge</h4><div class="price">&#8369;800</div><p>Premium enclosed room with dedicated service for special gatherings.</p></div></button></div>
+    <form id="reservationForm" class="form-card">
+      <div class="row-2">
+        <input type="text" name="name" placeholder="Full Name" required aria-label="Full Name">
+        <input type="email" name="email" placeholder="Email" required aria-label="Email">
+      </div>
+      <div class="row-2">
+        <input type="tel" name="phone" placeholder="Phone" required aria-label="Phone">
+        <input type="date" name="date" required aria-label="Date">
+      </div>
+      <div class="row-2">
+        <select name="party" required aria-label="Party Size">
+          <option value="">Party Size</option>
+          <option value="2">2 people</option><option value="4">4 people</option>
+          <option value="6">6 people</option><option value="8+">8+ people</option>
+        </select>
+        <select id="tableType" name="table" aria-label="Table">
+          <option value="booth">Leather Booth</option><option value="bar">Private Lounge with Billiard Table</option>
+          <option value="patio">Private Lounge with Karaoke</option><option value="private">Private Lounge</option>
+        </select>
+      </div>
+      <textarea rows="4" name="requests" placeholder="Special Requests" aria-label="Special Requests"></textarea>
+      <button type="submit" class="btn btn-gold" style="justify-self:stretch">Make Reservation</button>
+    </form>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="container">
+    &copy; 2026 BOXYARD Resto Bar. All rights reserved. | 21+ Only
+    <div class="social-links">
+      <a href="#" aria-label="Instagram">IG</a>
+      <a href="#" aria-label="Facebook">FB</a>
+      <a href="#" aria-label="Twitter">X</a>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body></html>

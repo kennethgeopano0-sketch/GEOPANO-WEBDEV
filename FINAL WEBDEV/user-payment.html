@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Methods</title>
+<meta name="description" content="BOXYARD Resto Bar — fine dining, craft cocktails, live music.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="container">
+    <h1>🍸 BOXYARD <span style="color:#b8b8b8;font-weight:400;font-size:.95rem">· Member</span></h1>
+    <ul>
+      <li><a href="user.html" class="">Dashboard</a></li><li><a href="user-reservation.html" class="">Reservation</a></li><li><a href="user-menu.html" class="">Menu</a></li><li><a href="user-payment.html" class="active">Payment</a></li><li><a href="user-transaction.html" class="">Transaction</a></li><li><a href="user-profile.html" class="">Profile</a></li>
+      <li><span class="user-chip" data-user-name>Guest</span></li>
+      <li><a href="#" class="logout-link" onclick="logout();return false;">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="dash"><div class="container">
+<div class="dash-header"><div><h1>Payment Methods</h1><p>Manage saved cards used for reservations and orders.</p></div></div><div class="panels">
+  <div class="panel"><h2>Saved Cards</h2><ul>
+    <li><div><div>💳 Visa •••• 4242</div><div class="muted">Expires 08/27</div></div><button class="btn btn-outline btn-sm" onclick="toast('Card removed')">Remove</button></li>
+    <li><div><div>💳 Mastercard •••• 5588</div><div class="muted">Expires 11/26</div></div><button class="btn btn-outline btn-sm" onclick="toast('Card removed')">Remove</button></li>
+  </ul></div>
+  <div class="panel"><h2>Add New Card</h2>
+    <form class="form-card" onsubmit="event.preventDefault();toast('Card added');this.reset();">
+      <input placeholder="Name on card" required>
+      <input placeholder="Card number" required>
+      <div class="row-2"><input placeholder="MM/YY" required><input placeholder="CVC" required></div>
+      <button class="btn btn-gold">Add Card</button>
+    </form></div>
+</div>
+</div></main>
+<script src="script.js"></script>
+<script>requireRole('user');</script>
+</body></html>

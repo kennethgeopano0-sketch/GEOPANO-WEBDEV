@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Management</title>
+<meta name="description" content="BOXYARD Resto Bar — fine dining, craft cocktails, live music.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="container">
+    <h1>🍸 BOXYARD <span style="color:#b8b8b8;font-weight:400;font-size:.95rem">· Super Admin</span></h1>
+    <ul>
+      <li><a href="super-admin.html" class="">Dashboard</a></li><li><a href="super-admin-reports.html" class="">Reports</a></li><li><a href="super-admin-sales.html" class="">Sales</a></li><li><a href="super-admin-users.html" class="active">Users</a></li>
+      <li><span class="user-chip" data-user-name>Guest</span></li>
+      <li><a href="#" class="logout-link" onclick="logout();return false;">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="dash"><div class="container">
+<div class="dash-header"><div><h1>User Management</h1><p>Manage all platform accounts and roles.</p></div></div><div class="panels" style="grid-template-columns:1fr 2fr">
+  <div class="panel"><h2>Invite User</h2>
+    <form class="form-card" onsubmit="event.preventDefault();toast('Invite sent');this.reset();">
+      <input placeholder="Full name" required><input type="email" placeholder="Email" required>
+      <select><option>User</option><option>Admin</option><option>Super Admin</option></select>
+      <button class="btn btn-gold">Send Invite</button>
+    </form></div>
+  <div class="panel"><h2>All Users</h2><div class="table-wrap"><table><thead><tr><th>Name</th><th>Email</th><th>Role</th><th>Status</th><th>Actions</th></tr></thead><tbody><tr><td><b>Alex Carter</b></td><td class="muted">alex@boxyard.test</td><td><span class="tag">User</span></td><td><span class="tag">Active</span></td><td class="actions"><button onclick="toast('Status updated')">Suspend</button><button class="danger" onclick="toast('Removed')">Delete</button></td></tr>
+<tr><td><b>Jordan Reyes</b></td><td class="muted">jordan@boxyard.test</td><td><span class="tag">Admin</span></td><td><span class="tag">Active</span></td><td class="actions"><button onclick="toast('Status updated')">Suspend</button><button class="danger" onclick="toast('Removed')">Delete</button></td></tr>
+<tr><td><b>Morgan Vale</b></td><td class="muted">morgan@boxyard.test</td><td><span class="tag">Super Admin</span></td><td><span class="tag">Active</span></td><td class="actions"><button onclick="toast('Status updated')">Suspend</button><button class="danger" onclick="toast('Removed')">Delete</button></td></tr>
+<tr><td><b>Riley Chen</b></td><td class="muted">riley@boxyard.test</td><td><span class="tag">User</span></td><td><span class="tag muted">Suspended</span></td><td class="actions"><button onclick="toast('Status updated')">Activate</button><button class="danger" onclick="toast('Removed')">Delete</button></td></tr>
+<tr><td><b>Casey Park</b></td><td class="muted">casey@boxyard.test</td><td><span class="tag">Admin</span></td><td><span class="tag">Active</span></td><td class="actions"><button onclick="toast('Status updated')">Suspend</button><button class="danger" onclick="toast('Removed')">Delete</button></td></tr></tbody></table></div></div>
+</div>
+</div></main>
+<script src="script.js"></script>
+<script>requireRole('superadmin');</script>
+</body></html>

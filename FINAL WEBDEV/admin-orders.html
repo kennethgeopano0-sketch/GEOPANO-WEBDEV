@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Management</title>
+<meta name="description" content="BOXYARD Resto Bar - fine dining, craft cocktails, live music.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="container">
+    <h1>BOXYARD <span style="color:#b8b8b8;font-weight:400;font-size:.95rem">- Admin</span></h1>
+    <ul>
+      <li><a href="admin.html" class="">Dashboard</a></li><li><a href="admin-reservation.html" class="">Reservations</a></li><li><a href="admin-menu.html" class="">Menu</a></li><li><a href="admin-orders.html" class="active">Orders</a></li><li><a href="admin-profile.html" class="">Profile</a></li>
+      <li><span class="user-chip" data-user-name>Guest</span></li>
+      <li><a href="#" class="logout-link" onclick="logout();return false;">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="dash"><div class="container">
+<div class="dash-header"><div><h1>Order Management</h1><p>Track and progress live kitchen tickets.</p></div></div><div class="panels"><div class="panel"><h2>New</h2><div style="background:rgba(255,255,255,.05);padding:.75rem;border-radius:10px;margin-bottom:.5rem"><div style="display:flex;justify-content:space-between"><b style="color:#d4af37;font-family:monospace">#1044</b><span class="muted">Private Lounge</span></div><p class="muted" style="font-size:.8rem;margin:.4rem 0">Handaan Platter x6</p><b>&#8369;540</b><button class="btn btn-gold btn-sm" style="width:100%;margin-top:.5rem" onclick="toast('Advanced')">Advance -></button></div></div><div class="panel"><h2>Cooking</h2><div style="background:rgba(255,255,255,.05);padding:.75rem;border-radius:10px;margin-bottom:.5rem"><div style="display:flex;justify-content:space-between"><b style="color:#d4af37;font-family:monospace">#1041</b><span class="muted">Leather Booth</span></div><p class="muted" style="font-size:.8rem;margin:.4rem 0">Wagyu Bistek, Arroz Caldo, 2x Maynila</p><b>&#8369;158</b><button class="btn btn-gold btn-sm" style="width:100%;margin-top:.5rem" onclick="toast('Advanced')">Advance -></button></div></div><div class="panel"><h2>Plating</h2><div style="background:rgba(255,255,255,.05);padding:.75rem;border-radius:10px;margin-bottom:.5rem"><div style="display:flex;justify-content:space-between"><b style="color:#d4af37;font-family:monospace">#1042</b><span class="muted">Private Lounge with Billiard Table</span></div><p class="muted" style="font-size:.8rem;margin:.4rem 0">Kinilaw, Gintong Negroni</p><b>&#8369;43</b><button class="btn btn-gold btn-sm" style="width:100%;margin-top:.5rem" onclick="toast('Advanced')">Advance -></button></div></div><div class="panel"><h2>Served</h2><div style="background:rgba(255,255,255,.05);padding:.75rem;border-radius:10px;margin-bottom:.5rem"><div style="display:flex;justify-content:space-between"><b style="color:#d4af37;font-family:monospace">#1043</b><span class="muted">Private Lounge with Karaoke</span></div><p class="muted" style="font-size:.8rem;margin:.4rem 0">Arroz Caldo, Pulang Alak</p><b>&#8369;68</b></div></div></div>
+</div></main>
+<script src="script.js"></script>
+<script>requireRole('admin');</script>
+</body></html>
